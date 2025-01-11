@@ -1,9 +1,5 @@
 import requests
+import os
+TOKEN = os.getenv("TOKEN")
+print(f'TOKEN: {TOKEN}')
 
-TOKEN ='1602686596:AAHdqoVLsAlXlFYDlihaQy1x_Tmilg7fqiM'
-
-URL = f"https://api.telegram.org/bot{TOKEN}"
-
-# Get me
-r = requests.get(URL + "/getMe")
-print(r.json())
